@@ -1,0 +1,189 @@
+body,
+html {
+    font-family: 'RobotoDraft', sans-serif;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #eee;
+
+    backface-visibility: hidden;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navBar {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 150px;
+
+    transform: translate3d(0,0,0);
+
+    color: #fff;
+    background-color: #3f51b5;
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+
+    backface-visibility: hidden;
+}
+
+.navBar.ng-enter {
+    animation: fadeInDown .6s;
+}
+
+.navBar.ng-leave {
+    animation: fadeOutUp .6s;
+}
+
+.navBar ul {
+    float: right;
+
+    margin-right: 20px;
+    padding: 5px;
+
+    list-style-type: none;
+}
+
+.navBar li {
+    float: right;
+
+    margin-left: 10px;
+}
+.navBar li a {
+    padding: 7px 10px;
+
+    cursor: pointer;
+}
+.navBar li a:hover,
+.navBar li a.selected {
+    padding: 7px 10px;
+
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 5%,rgba(0,0,0,.08) 40%);
+    box-shadow: 0 1px 1px rgba(0,0,0,.2) inset,0 -1px 1px rgba(0,0,0,.1) inset,0 1px 0 rgba(0,0,0,.2) inset;
+}
+
+.logo {
+    font-family: 'Damion', cursive;
+    font-size: 28px;
+    line-height: 60px;
+
+    margin-left: 20px;
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+.card {
+    position: relative;
+
+    margin: 80px auto 40px auto;
+
+    background: #fff;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .1);
+}
+
+
+.card.fadeIn.ng-enter {
+    animation: fadeInUp .6s;
+}
+
+.card.fadeOut.ng-leave {
+    animation: fadeOutDown .6s;
+}
+
+.card + .card {
+    margin: -40px auto 40px auto;
+
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Button */
+button {
+    font-size: .9em;
+    line-height: 32px;
+
+    position: relative;
+
+    display: inline-block;
+
+    min-width: 120px;
+    height: 32px;
+
+    transition: box-shadow .2s cubic-bezier(.4, 0, .2, 1);
+    transition-delay: .1s;
+
+    color: #646464;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background-color: #fff;
+    background-color: #eee;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+button.blue {
+    color: white;
+    background-color: #4285f4;
+}
+
+button:active {
+    transition-delay: 0s;
+
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2);
+}
+
+/* Toast notifications */
+.toast-container {
+    position: fixed;
+    bottom: 0;
+    left: 12px;
+
+    overflow: hidden;
+
+    width: 288px;
+    padding-bottom: 12px;
+}
+
+.toast {
+    font-size: 14px;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    min-width: 288px;
+    min-height: 48px;
+    margin-top: 10px;
+    padding: 16px 24px 12px;
+
+    color: #f1f1f1;
+    border-radius: 2px;
+    background: #323232;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+.toast.ng-enter {
+    animation: fadeInUp .2s;
+}
+
+.toast.ng-leave {
+    animation: fadeOutDown .2s;
+}
+
+@media (max-width: 900px) {
+    .navBar {
+        z-index: 1;
+
+        height: 60px;
+    }
+
+    .card {
+        margin-top: 60px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

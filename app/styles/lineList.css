@@ -1,0 +1,52 @@
+.lineList {
+    max-width: 930px;
+}
+
+
+.lineList.plusMargin {
+    margin-bottom: 280px;
+}
+
+.lineList ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.lineList li {
+    font-size: .85em;
+
+    overflow: hidden;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.lineList li:hover {
+    background-color: #ececec;
+}
+
+.lineList li.selected {
+    color: white;
+    background-color: #8c9eff;
+}
+
+li .lineNumber {
+    font-weight: bold;
+}
+
+li .lineTimes {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: silver;
+}
+
+li.selected .lineTimes {
+    color: #fff;
+}

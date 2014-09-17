@@ -1,0 +1,42 @@
+.fileInfo,
+.syncSection {
+    max-width: 890px;
+    padding: 20px;
+}
+
+.fileInfo h3,
+.syncSection h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+
+    margin: 0;
+
+    letter-spacing: .05em;
+
+    color: #e91e63;
+    background-color: #fff;
+}
+
+.fileInfo p span {
+    font-weight: 300;
+    line-height: 28px;
+
+    display: block;
+
+    margin: 0;
+
+    letter-spacing: -.01em;
+}
+
+.optionButtons {
+    overflow: hidden;
+
+    padding: 2px 8px 17px 2px;
+}
+
+.optionButtons button {
+    float: right;
+
+    margin-left: 10px;
+}

@@ -1,0 +1,63 @@
+.uploadWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.uploadWrap.ng-enter {
+    -webkit-animation: fadeIn .6s;
+            animation: fadeIn .6s;
+}
+
+.dropZone {
+    min-width: 200px;
+    min-height: 200px;
+
+    transition: all .5s ease;
+
+    color: #3f51b5;
+    border: 4px dashed #3f51b5;
+    border-radius: 50%;
+}
+
+.dropZone p {
+    margin-top: 87px;
+
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.uploadButton {
+    font-size: .8em;
+    font-weight: bold;
+
+    display: block;
+
+    margin-top: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    text-align: center;
+
+    color: #3f51b5;
+    border-radius: 5px;
+}
+
+.uploadButton:hover {
+    transition: .5s ease-in-out;
+
+    color: #fff;
+    background-color: #3f51b5;
+}
+
+.uploadButton input[type='file'] {
+    display: none;
+}
+
+body.fileover .dropZone {
+    color: #fff;
+    background-color: #3f51b5;
+}

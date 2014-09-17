@@ -1,0 +1,111 @@
+.lineEditor {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+
+    overflow-y: scroll;
+
+    width: 100%;
+    height: 200px;
+    padding: 10px 40px 20px 40px;
+
+    transform: translate3d(0,0,0);
+
+    background-color: #fff;
+    box-shadow: 3px 0 3px 3px rgba(0, 0, 0, .1);
+
+    backface-visibility: hidden;
+}
+
+.lineEditor.ng-enter {
+    animation: fadeInUp .6s;
+}
+
+.lineEditor.ng-leave {
+    animation: fadeOutDown .6s;
+}
+
+.lineEditor p {
+    font-size: .9em;
+
+    margin: 5px 0;
+}
+
+.lineEditorSelector {
+    overflow: hidden;
+
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.lineEditorSelector li {
+    float: left;
+
+    margin: 0;
+    margin-right: 10px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    border-bottom: 2px solid #fff;
+}
+
+.lineEditorSelector li.selected,
+.lineEditorSelector li.selected:hover {
+    border-bottom: 2px solid #ececec;
+    border-bottom: 2px solid #e91e63;
+}
+
+.lineEditorSelector li:hover {
+    border-bottom: 2px solid #ececec;
+}
+
+.lineEditorTime input[type=range] {
+    /*required for proper track sizing in FF*/
+    width: 300px;
+    /*fix for FF unable to apply focus style bug */
+
+    border: 1px solid white;
+    outline: none;
+    /*removes default webkit styles*/
+
+    -webkit-appearance: none;
+}
+
+.lineEditorTime input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 2px;
+    margin-top: -8px;
+
+    transition: .3s ease-in-out;
+
+    border: none;
+    border-radius: 3px;
+    background: #ececec;
+}
+
+.lineEditorTime input[type=range]::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    margin-top: -7px;
+
+    cursor: pointer;
+    transition: .1s ease-in-out;
+
+    border: 2px solid #e91e63;
+    border-radius: 50%;
+    background-color: white;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+}
+
+
+.lineEditorTime input[type='range']::-webkit-slider-thumb:active {
+    transform: scale(.6);
+
+    box-shadow: 3px 0 3px 3px rgba(0, 0, 0, .1);
+}
