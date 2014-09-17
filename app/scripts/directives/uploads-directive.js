@@ -14,7 +14,7 @@ uploadsDirectives.directive('upload',  ['FileCenter', 'toastService', function (
 
     return {
         restrict: 'A',
-        controller: function ($scope) {
+        controller: ["$scope", function ($scope) {
             this.processFiles = function (files) {
 
                 var numFiles = files.length,
@@ -65,7 +65,7 @@ uploadsDirectives.directive('upload',  ['FileCenter', 'toastService', function (
                     }
                 }
             };
-        }
+        }]
     };
 }]);
 
