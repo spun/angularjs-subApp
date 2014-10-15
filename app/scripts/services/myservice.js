@@ -1,4 +1,5 @@
 /*global angular: false*/
+/*jslint regexp: true */
 
 /**
  * @ngdoc service
@@ -40,10 +41,10 @@ myServices.factory('FileCenter', ['subtitleTimeFilter', function (subtitleTimeFi
 
         timeToMiliseconds: function (time) {
             var miliseconds = 0;
-            miliseconds += time.hours * 3600000;
-            miliseconds += time.minutes * 60000;
-            miliseconds += time.seconds * 1000;
-            miliseconds += time.miliseconds;
+            miliseconds += parseInt(time.hours, 10) * 3600000;
+            miliseconds += parseInt(time.minutes, 10) * 60000;
+            miliseconds += parseInt(time.seconds, 10) * 1000;
+            miliseconds += parseInt(time.miliseconds, 10);
 
             return miliseconds;
         },
