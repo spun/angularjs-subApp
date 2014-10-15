@@ -1,4 +1,5 @@
 /*global angular: false, FileReader: false*/
+/*jslint regexp: true */
 
 /**
  * @ngdoc directive
@@ -14,7 +15,7 @@ uploadsDirectives.directive('upload',  ['FileCenter', 'toastService', function (
 
     return {
         restrict: 'A',
-        controller: ["$scope", function ($scope) {
+        controller: ['$scope', function ($scope) {
             this.processFiles = function (files) {
 
                 var numFiles = files.length,
