@@ -1,5 +1,7 @@
 {
   "name": "SubApp",
+  "version": "0.0.1",
+  "private": true,
   "devDependencies": {
     "apache-server-configs": "^2.7.1",
     "grunt": "^0.4.5",
@@ -21,9 +23,6 @@
     "grunt-svgmin": "^0.4.0",
     "grunt-usemin": "^2.3.0",
     "grunt-wiredep": "^1.7.0",
-    "imagemin-gifsicle": "^2.0.0",
-    "imagemin-jpegtran": "^2.0.0",
-    "imagemin-optipng": "^2.0.1",
     "jshint-stylish": "^0.4.0",
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.4.0"
